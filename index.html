@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pneumatic Suspension Landing Page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <img
+          src="/assets/shopping-cart.svg"
+          alt="Корзина"
+          id="cart-icon"
+          onclick="showCart()"
+        />
+        <span id="cart-count-badge">0</span>
+      </div>
+    </nav>
+    <header>
+      <h1>Pneumatic Suspension</h1>
+      <p>Experience the ultimate comfort and performance</p>
+    </header>
+
+    <section class="brands">
+      <div class="brand gaz">
+        <img
+          class="img-brand"
+          src="./assets/gazbig.png"
+          alt="gaz"
+          onclick="toggleBrand('gaz');"
+        />
+        <div class="product-card gaz">
+          <img
+            src="https://air-ride.ru/components/com_jshopping/files/img_products/thumb_102021.jpg"
+            alt="Product 1"
+          />
+          <h3>
+            Усиленная пневмоподвеска ГАЗ Газель Бизнес, Валдай, передняя ось
+          </h3>
+          <p class="description" id="description1" style="display: none">
+            Пневмоподвеска ГАЗ Газель / ГАЗ Валдай передняя ось разработана для
+            сохранения утрачиваемых грузовых характеристик автомобиля и
+            увеличения характеристик комфорта передней оси. Пневмоподвеска
+            защищает рессорный пакет от проседания и служит регулировкой не
+            только высоты переднего свеса автомобиля, но и комфортных
+            характеристик работы подвески передней оси. Устанавливая
+            пневмоподвеску "ПКФ "Пневматик-А" ("Эйр-Райд"), вы сокращаете
+            расходы на обслуживание подвески передней оси автомобиля. Также
+            пневмоподвеска служит дополнительным стабилизатором поперечной
+            устойчивости с возможностью ручной регулировки, исключающей боковые
+            качения и крены (при разделении управления на 2 контура).
+            Оборудование разработано с учетом возможности для самостоятельной
+            установки и исключает доработки штатных узлов автомобилей. Для
+            удобства управления пневмоподвеской рекомендуем установить следующие
+            варианты систем: Одноконтурная и двухконтурная система. Год выпуска
+            автомобиля: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
+            2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+            2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 Ось: Передняя
+            Марка ТС: ГАЗ Системы управления: Без системы управления Тип
+            пневмоэлемента: 165 Артикул: 102021
+          </p>
+          <p class="price">$99.99</p>
+          <button
+            class="learn-more"
+            onclick="toggleDescription('description1')"
+          >
+            Подробнее
+          </button>
+          <button class="add-to-cart" onclick="addToCart('Product 1', 99.99)">
+            В корзину
+          </button>
+        </div>
+        <div class="product-card gaz">
+          <img
+            src="https://air-ride.ru/components/com_jshopping/files/img_products/thumb_102031.JPG"
+            alt="Product 2"
+          />
+          <h3>Пневмоподвеска ГАЗ Валдай Next, передняя ось</h3>
+          <p class="description" id="description2" style="display: none">
+            Пневмоподвеска на ГАЗ Валдай Next передняя ось разработана для
+            сохранения утрачиваемых грузовых характеристик автомобиля и
+            увеличения характеристик комфорта передней оси. Пневмоподвеска
+            защищает рессорный пакет от проседания и служит регулировкой не
+            только высоты переднего свеса автомобиля, но и комфортных
+            характеристик работы подвески передней оси. Устанавливая
+            пневмоподвеску "ПКФ "Пневматик-А" ("Эйр-Райд"), вы сокращаете
+            расходы на обслуживание подвески передней оси автомобиля. Также
+            пневмоподвеска служит дополнительным стабилизатором поперечной
+            устойчивости с возможностью ручной регулировки, исключающей боковые
+            качения и крены (при разделении управления на 2 контура).
+            Оборудование разработано с учетом возможности для самостоятельной
+            установки и исключает доработки штатных узлов автомобилей. Для
+            удобства управления пневмоподвеской рекомендуем установить следующие
+            варианты систем: Одноконтурная и двухконтурная система Год выпуска
+            автомобиля: 2020, 2021, 2022, 2023 Ось: Передняя Марка ТС: ГАЗ
+            Системы управления: Без системы управления Тип пневмоэлемента: 165
+            Ресивер: Без ресивера Давление в системе: борт.питание Подкачка шин:
+            без подкачки шин Артикул: 102031
+          </p>
+          <p class="price">$149.99</p>
+          <button
+            class="learn-more"
+            onclick="toggleDescription('description2')"
+          >
+            Подробнее
+          </button>
+          <button class="add-to-cart" onclick="addToCart('Product 2', 149.99)">
+            В корзину
+          </button>
+        </div>
+        <div class="product-card gaz">
+          <img
+            src="https://air-ride.ru/components/com_jshopping/files/img_products/thumb_102030.jpg"
+            alt="Product 3"
+          />
+          <h3>
+            Усиленная пневмоподвеска на ГАЗ Валдай, Валдай Next, задняя ось
+          </h3>
+          <p class="description" id="description2" style="display: none">
+            Пневмоподвеска на ГАЗ Валдай Next передняя ось разработана для
+            сохранения утрачиваемых грузовых характеристик автомобиля и
+            увеличения характеристик комфорта передней оси. Пневмоподвеска
+            защищает рессорный пакет от проседания и служит регулировкой не
+            только высоты переднего свеса автомобиля, но и комфортных
+            характеристик работы подвески передней оси. Устанавливая
+            пневмоподвеску "ПКФ "Пневматик-А" ("Эйр-Райд"), вы сокращаете
+            расходы на обслуживание подвески передней оси автомобиля. Также
+            пневмоподвеска служит дополнительным стабилизатором поперечной
+            устойчивости с возможностью ручной регулировки, исключающей боковые
+            качения и крены (при разделении управления на 2 контура).
+            Оборудование разработано с учетом возможности для самостоятельной
+            установки и исключает доработки штатных узлов автомобилей. Для
+            удобства управления пневмоподвеской рекомендуем установить следующие
+            варианты систем: Одноконтурная и двухконтурная система Год выпуска
+            автомобиля: 2020, 2021, 2022, 2023 Ось: Передняя Марка ТС: ГАЗ
+            Системы управления: Без системы управления Тип пневмоэлемента: 165
+            Ресивер: Без ресивера Давление в системе: борт.питание Подкачка шин:
+            без подкачки шин Артикул: 102031
+          </p>
+          <p class="price">$149.99</p>
+          <button
+            class="learn-more"
+            onclick="toggleDescription('description2')"
+          >
+            Подробнее
+          </button>
+          <button class="add-to-cart" onclick="addToCart('Product 2', 149.99)">
+            В корзину
+          </button>
+        </div>
+      </div>
+
+      <div class="brand brand2">
+        <h2 class="brand-name">Brand 2</h2>
+        <div class="product-card brand2">
+          <img src="product1_brand2.jpg" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p class="description" id="description3" style="display: none">
+            Description of Product 1 from Brand 2.
+          </p>
+          <p class="price">$129.99</p>
+          <button
+            class="learn-more"
+            onclick="toggleDescription('description3')"
+          >
+            Подробнее
+          </button>
+          <button class="add-to-cart" onclick="addToCart('Product 1', 129.99)">
+            В корзину
+          </button>
+        </div>
+        <div class="product-card brand2">
+          <img src="product2_brand2.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p class="description" id="description4" style="display: none">
+            Description of Product 2 from Brand 2.
+          </p>
+          <p class="price">$179.99</p>
+          <button
+            class="learn-more"
+            onclick="toggleDescription('description4')"
+          >
+            Подробнее
+          </button>
+          <button class="add-to-cart" onclick="addToCart('Product 2', 179.99)">
+            В корзину
+          </button>
+        </div>
+        <!-- Add more product cards for Brand 2 as needed -->
+      </div>
+      <!-- Add more brands as needed -->
+    </section>
+
+    <!-- Модальное окно для корзины -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideCartModal">&times;</span>
+        <h2>Корзина</h2>
+        <ul id="cart-list-modal"></ul>
+        <button onclick="clearCart()">Очистить корзину</button>
+      </div>
+    </div>
+
+    <section class="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Adjustable Suspension</li>
+        <li>Enhanced Comfort</li>
+        <li>Improved Handling</li>
+        <!-- Add more features as needed -->
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>For inquiries and installation, contact our experts.</p>
+      <a href="mailto:info@pneumaticsuspension.com"
+        >info@pneumaticsuspension.com</a
+      >
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Pneumatic Suspension. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
