@@ -83,11 +83,12 @@ function showCart() {
   // Создаем элементы списка для каждого товара в корзине
   cart.forEach(function (product) {
     var listItem = document.createElement('li');
-    listItem.textContent = product.name + ' - ' + product.price;
+    listItem.textContent = product.name + ' - ' + product.price + ' ';
 
     // Добавляем кнопку удаления для каждого товара
     var deleteButton = document.createElement('button');
     deleteButton.textContent = 'Удалить';
+    deleteButton.className = 'cart-btn';
     deleteButton.onclick = function () {
       removeFromCart(product);
     };

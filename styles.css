@@ -53,15 +53,6 @@ header {
   right: 10px;
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/*  */
 header {
   background-color: #f2f2f2;
 }
@@ -81,7 +72,8 @@ header {
 }
 
 .add-to-cart,
-.learn-more {
+.learn-more,
+.cart-btn {
   background-color: #262c27;
   color: white;
   padding: 10px;
@@ -91,12 +83,14 @@ header {
 }
 
 .add-to-cart:hover,
-.learn-more:hover {
+.learn-more:hover,
+.cart-btn:hover {
   background-color: #3d4a3e;
 }
 
 .features {
   background-color: #e6e6e6;
+  text-align: left;
 }
 
 .contact {
@@ -106,10 +100,13 @@ header {
 footer {
   background-color: #333;
   color: white;
-  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
+}
+
+.partners img {
+  width: 100%;
 }
 
 /* Добавляем стили для модального окна */
@@ -142,10 +139,16 @@ footer {
 /* Добавляем стили для навигационной панели */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px;
-  background-color: #333;
+  background-color: #3c3c3c;
   color: #fff;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
 }
 
 #cart-count-badge {
@@ -153,12 +156,15 @@ footer {
   color: #333;
   border-radius: 50%;
   padding: 5px 10px;
-  margin-left: 5px;
+  margin-left: 16px;
 }
 
 /* Остальные стили остаются без изменений */
 #cart-icon {
   width: 25px;
+  margin: 10px;
+  cursor: pointer;
+  margin: -15px;
 }
 
 /* .product-cards {
@@ -213,4 +219,10 @@ footer {
 .product-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+#contact a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
