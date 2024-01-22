@@ -1,32 +1,3 @@
-// карусель
-let currentIndex = 0;
-const intervalTime = 5000; // Интервал в миллисекундах (5 секунд)
-
-function changeSlide(direction) {
-  const slides = document.querySelector('.slider');
-  const slideWidth = document.querySelector('.slide').offsetWidth;
-
-  currentIndex += direction;
-
-  if (currentIndex < 0) {
-    currentIndex = slides.children.length - 1;
-  } else if (currentIndex >= slides.children.length) {
-    currentIndex = 0;
-  }
-
-  const translateValue = -currentIndex * slideWidth;
-  slides.style.transform = `translateX(${translateValue}px)`;
-}
-
-function autoChangeSlide() {
-  changeSlide(1); // Переключаемся на следующий слайд
-}
-
-// Устанавливаем интервал для автоматического переключения слайдов
-setInterval(autoChangeSlide, intervalTime);
-
-//
-
 // Скрываем все карточки товара при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
   var allProductCards = document.querySelectorAll('.product-card');
@@ -68,6 +39,35 @@ function toggleDescription(descriptionId) {
       ? 'block'
       : 'none';
 }
+// карусель
+let currentIndex = 0;
+const intervalTime = 5000; // Интервал в миллисекундах (5 секунд)
+
+function changeSlide(direction) {
+  const slides = document.querySelector('.slider');
+  const slideWidth = document.querySelector('.slide').offsetWidth;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = slides.children.length - 1;
+  } else if (currentIndex >= slides.children.length) {
+    currentIndex = 0;
+  }
+
+  const translateValue = -currentIndex * slideWidth;
+  slides.style.transform = `translateX(${translateValue}px)`;
+}
+
+function autoChangeSlide() {
+  changeSlide(1); // Переключаемся на следующий слайд
+}
+
+// Устанавливаем интервал для автоматического переключения слайдов
+setInterval(autoChangeSlide, intervalTime);
+
+//
+
 updateCartCountBadge();
 // Функция для отображения корзины в модальном окне
 function showCart() {
